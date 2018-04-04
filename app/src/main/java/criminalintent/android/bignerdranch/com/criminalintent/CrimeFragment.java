@@ -18,7 +18,7 @@ public class CrimeFragment extends Fragment {
     public Crime mCrime;
     private EditText mTitleField;
     private Button mDateButton;
-    private CheckBox mCheckBox;
+    private CheckBox mSolvedCheckBox;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -52,10 +52,9 @@ public class CrimeFragment extends Fragment {
             }
         });
 
-        mCheckBox = v.findViewById(R.id.crime_solved);
+        mSolvedCheckBox = v.findViewById(R.id.crime_solved);
 
-        // <editor-fold deraultstate="collapsed" desc="слушатель чекбокса"
-        mCheckBox.setOnCheckedChangeListener(
+        mSolvedCheckBox.setOnCheckedChangeListener(
                 new CompoundButton.OnCheckedChangeListener(){
                     @Override
                     public void  onCheckedChanged(CompoundButton buttonView,boolean isChecked) {
